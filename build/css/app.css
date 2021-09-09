@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/* Colors */
+/* Weights */
+/* Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #19a2ae;
+}
+
+body::before {
+  content: "";
+  background: url("../images/bg-pattern-top.svg") no-repeat, url("../images/bg-pattern-bottom.svg") no-repeat;
+  background-position: bottom 350px right 150px, top 350px left 150px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+@media only screen and (min-width: 768px) {
+  body::before {
+    background-position: bottom 200px right 700px, top 350px left 650px;
+  }
+}
+/* @include tablet(){
+   body::before{
+      background-position: bottom 200px right 700px, top 350px left 650px;
+   }
+} */
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.card {
+  border-radius: 20px;
+  margin-top: 50px;
+  background: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    width: 30%;
+    margin: 0 auto;
+  }
+}
+.header {
+  background-image: url("../images/bg-pattern-card.svg");
+  width: 100%;
+  height: 150px;
+  border-radius: 20px 20px 0 0;
+}
+
+.image {
+  width: 100%;
+}
+.image img {
+  border-radius: 50%;
+  position: relative;
+  top: -50px;
+  display: block;
+  margin: 0 auto;
+  border: 7px solid #fff;
+}
+
+.body-card {
+  position: relative;
+  top: -50px;
+  text-align: center;
+}
+.body-card .title {
+  margin: 15px 0 10px 0;
+  font-size: 18px;
+  color: #2d3248;
+  font-weight: 700;
+}
+.body-card .title span {
+  font-weight: 400;
+  color: #6a6f81;
+}
+.body-card .country {
+  color: #6a6f81;
+}
+
+.stats {
+  position: relative;
+  top: -10px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #dadada;
+}
+.stats .stat h3 {
+  color: #2d3248;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.stats .stat p {
+  color: #6a6f81;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}

@@ -1,0 +1,38 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   background-color: $dark-cyan;
+}
+
+body::before{
+   content: '';
+   background: url('../images/bg-pattern-top.svg')no-repeat, url("../images/bg-pattern-bottom.svg") no-repeat;
+   background-position: bottom 350px right 150px, top 350px left 150px;
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   left: 0;
+   top: 0;
+   z-index: -1;
+}
+
+@media only screen and (min-width: 768px){
+   body::before{
+      background-position: bottom 200px right 700px, top 350px left 650px;
+   }
+}
+
+/* @include tablet(){
+   body::before{
+      background-position: bottom 200px right 700px, top 350px left 650px;
+   }
+} */
+
+.container {
+   width: 90%;
+   margin: auto;
+}
